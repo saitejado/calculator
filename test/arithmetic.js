@@ -6,7 +6,7 @@ describe('Arithmetic', function() {
           .end(function(err, res) {
               expect(res.body).to.eql({ error: "Unspecified operation" });
               done();
-          });
+          }); //
     });
     it('rejects invalid operation', function(done) {
       request.get('/arithmetic?operation=foobar&operand1=21&operand2=21')
